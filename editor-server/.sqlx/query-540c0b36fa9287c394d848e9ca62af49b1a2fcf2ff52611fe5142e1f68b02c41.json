@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "\n                    INSERT IGNORE INTO EditingControlFrame\n                    (user_id) VALUES (?);\n                ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": []
+  },
+  "hash": "540c0b36fa9287c394d848e9ca62af49b1a2fcf2ff52611fe5142e1f68b02c41"
+}

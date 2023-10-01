@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "\n                INSERT INTO Color (name, r, g, b)\n                VALUES (?, ?, ?, ?);\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": []
+  },
+  "hash": "eb3fe0f5bcb66c01de84e7d9e6ef85a1b2ed67c7d352cbda1afdb2b43d7834cc"
+}

@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "\n                UPDATE Color SET name = ?, r = ?, g = ?, b = ?\n                WHERE id = ?;\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 5
+    },
+    "nullable": []
+  },
+  "hash": "757d7748dacb1db1f566ce2fa419aa16d656d4cdb037b9b5d900a2808cdcb1b5"
+}

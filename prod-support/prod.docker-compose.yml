@@ -1,0 +1,46 @@
+version: "3.3"
+services:
+  editer-server:
+    image: 2024-lightdance-editor
+    container_name: 2024-lightdance-editor-server
+    build:
+      context: ..
+      dockerfile: ./prod-support/editor-server/Dockerfile
+    networks:
+      - lightdance-editor
+    depends_on:
+      - mysql
+      - redisdb
+    ports:
+      - "4000:4000"
+    expose:
+      - 4000
+  redisdb:
+    image: redis
+    container_name: 2024-lightdance-redisdb
+    networks:
+      - lightdance-editor
+    volumes:
+      - redis-data:/data
+    expose:
+      - 6379
+  mysql:
+    image: mysql:8.1.0
+    container_name: 2024-lightdance-mysql
+    networks:
+      - lightdance-editor
+    environment:
+      MYSQL_DATABASE: editor
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - mysql-data:/var/lib/mysql
+    expose:
+      - 3306
+
+networks:
+  lightdance-editor:
+    external: true
+
+volumes:
+  mysql-data:
+  redis-data:

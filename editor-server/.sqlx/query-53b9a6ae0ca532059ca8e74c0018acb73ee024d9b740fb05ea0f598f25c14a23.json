@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "\n                    UPDATE EditingPositionFrame SET frame_id = NULL\n                    WHERE user_id = ?;\n                ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": []
+  },
+  "hash": "53b9a6ae0ca532059ca8e74c0018acb73ee024d9b740fb05ea0f598f25c14a23"
+}

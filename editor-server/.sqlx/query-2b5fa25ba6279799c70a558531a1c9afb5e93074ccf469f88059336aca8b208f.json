@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "\n                    INSERT IGNORE INTO EditingLEDEffect\n                    (user_id) VALUES (?);\n                ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": []
+  },
+  "hash": "2b5fa25ba6279799c70a558531a1c9afb5e93074ccf469f88059336aca8b208f"
+}

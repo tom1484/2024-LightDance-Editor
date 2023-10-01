@@ -1,0 +1,60 @@
+
+type Color {
+	id: Int!
+	color: String!
+	colorCode: [Int!]!
+}
+
+input ColorCreateInput {
+	color: String!
+	colorCode: [Int!]!
+}
+
+type ColorMap {
+	colorMap: ColorMapScalar!
+}
+
+scalar ColorMapScalar
+
+enum ColorMutationMode {
+	UPDATED
+	CREATED
+	DELETED
+}
+
+type ColorPayload {
+	mutation: ColorMutationMode!
+	id: Int!
+	color: String
+	colorCode: [Int!]
+	editBy: Int!
+}
+
+input ColorUpdateInput {
+	color: String!
+	colorCode: [Int!]!
+}
+
+
+
+
+type MutationRoot {
+	editColor(id: Int!, data: ColorUpdateInput!): Color!
+	addColor(data: ColorCreateInput!): Color!
+	deleteColor(id: Int!): Boolean!
+}
+
+type QueryRoot {
+	colorMap: ColorMap!
+}
+
+
+type SubscriptionRoot {
+	colorSubscription: ColorPayload!
+}
+
+schema {
+	query: QueryRoot
+	mutation: MutationRoot
+	subscription: SubscriptionRoot
+}

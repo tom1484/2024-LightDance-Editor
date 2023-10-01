@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "\n                    UPDATE EditingLEDEffect SET led_effect_id = NULL\n                    WHERE user_id = ?;\n                ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": []
+  },
+  "hash": "056de3f09491249860a869fea1e8b0093b23ff19debb02a934b600a65178c1b9"
+}
